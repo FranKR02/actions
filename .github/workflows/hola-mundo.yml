@@ -14,5 +14,5 @@ jobs:
         with:
           dotnet-version: '6.0.x'
 
-      - name: Build and Run
-        run: dotnet run --project ./hola-mundo.cs
+      - name: Compile and Run
+        run: dotnet new console -n tempApp -o ./tempApp && mv ./hola-mundo.cs ./tempApp/Program.cs && cd ./tempApp && dotnet run
